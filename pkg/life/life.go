@@ -30,8 +30,8 @@ func NewWorld(height, width int) (*World, error) {
 func (w *World) neighbours(x, y int) int {
 	neighbours := 0
 
-	for i := 0; i <= x+1; i++ {
-		for j := 0; j <= y+1; j++ {
+	for i := 0; i <= x; i++ {
+		for j := 0; j <= y; j++ {
 			if w.Cells[i][j] == true {
 				neighbours++
 			}

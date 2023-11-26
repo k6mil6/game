@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/k6mil6/game/http/server"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 	"os"
 	"os/signal"
 )
