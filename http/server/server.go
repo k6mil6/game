@@ -11,7 +11,7 @@ import (
 )
 
 // маршрутизация
-func new(ctx context.Context,
+func newHandler(ctx context.Context,
 	logger *zap.Logger,
 	lifeService service.LifeService,
 ) (http.Handler, error) {
@@ -36,7 +36,7 @@ func Run(
 		return nil, err
 	}
 
-	muxHandler, err := new(ctx, logger, *lifeService)
+	muxHandler, err := newHandler(ctx, logger, *lifeService)
 	if err != nil {
 		return nil, err
 	}

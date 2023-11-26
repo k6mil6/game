@@ -47,7 +47,10 @@ func (a *Application) Run(ctx context.Context) int {
 	<-c
 	cancel()
 	//  завершим работу сервера
-	shutDownFunc(ctx)
+	err = shutDownFunc(ctx)
+	if err != nil {
+		return 0
+	}
 
 	return 0
 
